@@ -13,7 +13,7 @@ except ImportError:
     app = Flask(__name__)
 
 # Configuration
-BASE_URL = "https://daddylive.savvyservers.org"
+BASE_URL = "YOUR_URL_HERE"
 PROXY_ENDPOINT = f"{BASE_URL}/dl/dlm3u?url="
 
 def get_channel_info(channel_name):
