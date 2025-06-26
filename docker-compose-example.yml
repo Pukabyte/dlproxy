@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  dlproxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    container_name: dlproxy
+    hostname: dlproxy
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
